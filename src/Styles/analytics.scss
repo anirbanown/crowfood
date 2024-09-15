@@ -1,0 +1,286 @@
+@import "./constant";
+@import "./variables";
+
+.app__analytics {
+  height: fit-content;
+  background: $secondary-color;
+  padding: 35% $md-gap 10% $md-gap;
+
+  .analytics__container {
+    @include flexAlign;
+
+    .left__analytics {
+      @include flexDirection;
+      gap: $lg-gap;
+      flex: 1;
+
+      .left__text {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        h1 {
+          font-size: 4rem;
+          color: $primary-color;
+        }
+
+        p {
+          color: $neutral-color;
+          font-size: 1.3rem;
+        }
+      }
+
+      .left__analytics__container {
+        gap: $lg-gap;
+
+        .analytic__container {
+          @include flexAlign;
+          flex-direction: column;
+          gap: $lg-gap;
+          cursor: pointer;
+          color: $primary-color;
+          font-weight: bold;
+
+          .analytics__icon {
+            height: 180px;
+            width: 180px;
+            border-radius: 20px;
+            background: $neutral;
+            font-size: 2rem;
+            transition: $trans;
+            @include flexCenter;
+
+            &:hover {
+              background: $secondary-color;
+              box-shadow: $shadow;
+              @include textGradient;
+            }
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__analytics {
+    padding: 250% $sm-gap 5% $sm-gap;
+  }
+
+  .analytics__container {
+    @include flexDirection;
+    flex-direction: column;
+    gap: $sm-gap;
+
+    .left__analytics {
+      flex: none;
+      width: 100%;
+      gap: $sm-gap;
+
+      .left__text {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .left__analytics__container {
+        display: contents;
+        .analytic__container {
+          .analytics__icon {
+            height: 120px;
+            width: 120px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      display: none; // Hide or adjust layout for mobile
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__analytics {
+    padding: 25% $md-gap 7% $md-gap;
+  }
+
+  .analytics__container {
+    @include flexDirection;
+    flex-direction: column;
+    gap: $md-gap;
+
+    .left__analytics {
+      flex: none;
+      width: 100%;
+      gap: $md-gap;
+
+      .left__text {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+      }
+
+      .left__analytics__container {
+        .analytic__container {
+          .analytics__icon {
+            height: 150px;
+            width: 150px;
+            font-size: 1.75rem;
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      display: none; // Hide or adjust layout for mobile landscape
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__analytics {
+    padding: 30% $lg-gap 8% $lg-gap;
+  }
+
+  .analytics__container {
+    @include flexDirection;
+    flex-direction: row;
+    gap: $lg-gap;
+
+    .left__analytics {
+      flex: 1;
+      gap: $lg-gap;
+
+      .left__text {
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
+      .left__analytics__container {
+        .analytic__container {
+          .analytics__icon {
+            height: 160px;
+            width: 160px;
+            font-size: 1.9rem;
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__analytics {
+    padding: 35% $md-gap 10% $md-gap;
+  }
+
+  .analytics__container {
+    @include flexAlign;
+    gap: $lg-gap;
+
+    .left__analytics {
+      flex: 1;
+      gap: $lg-gap;
+
+      .left__text {
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+      }
+
+      .left__analytics__container {
+        .analytic__container {
+          .analytics__icon {
+            height: 170px;
+            width: 170px;
+            font-size: 1.9rem;
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__analytics {
+    padding: 35% $md-gap 10% $md-gap;
+  }
+
+  .analytics__container {
+    @include flexAlign;
+
+    .left__analytics {
+      flex: 1;
+      gap: $lg-gap;
+
+      .left__text {
+        h1 {
+          font-size: 4rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+      }
+
+      .left__analytics__container {
+        display: flex;
+        .analytic__container {
+          .analytics__icon {
+            height: 180px;
+            width: 180px;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .right__analytics {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "./constant";
+@import "./variables";
+
+.app__dashboard {
+  width: 70%;
+  position: absolute;
+  bottom: -80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  img {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: $shadow;
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__dashboard {
+    width: 90%;
+    bottom: -60%;
+    margin: 0 auto 0 auto;
+
+    img {
+      border-radius: 20px;
+      box-shadow: none;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__dashboard {
+    width: 85%;
+    bottom: -70%;
+
+    img {
+      border-radius: 30px;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__dashboard {
+    width: 80%;
+    bottom: -75%;
+
+    img {
+      border-radius: 35px;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__dashboard {
+    width: 70%;
+    bottom: -80%;
+
+    img {
+      border-radius: 40px;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__dashboard {
+    width: 70%;
+    bottom: -80%;
+
+    img {
+      border-radius: 40px;
+      box-shadow: $shadow;
+    }
+  }
+}

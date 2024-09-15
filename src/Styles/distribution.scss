@@ -1,0 +1,290 @@
+@import "./constant";
+@import "./variables";
+
+.app__distribution {
+  padding: 40% $md-gap 10% $md-gap;
+
+  .distribution__container {
+    @include flexAlign;
+
+    .left__distribution {
+      flex: 1;
+      @include flexDirection;
+      gap: $lg-gap;
+
+      .distribution__text {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        h1 {
+          font-size: 4rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: $neutral-color;
+        }
+      }
+
+      .distribution__buttons {
+        @include flexAlign;
+        gap: $lg-gap;
+
+        button {
+          @include button;
+          background: $primary-color;
+          color: $secondary-color;
+          gap: $sm-gap;
+          @include flexAlign;
+        }
+      }
+    }
+
+    .right__distribution {
+      flex: 1;
+      @include flexAlign;
+      justify-content: flex-end;
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__distribution {
+    padding: 150% $sm-gap 5% $sm-gap;
+
+    .distribution__container {
+      @include flexDirection;
+      flex-direction: column;
+      gap: $sm-gap;
+
+      .left__distribution {
+        @include flexDirection;
+        gap: $sm-gap;
+
+        .distribution__text {
+          @include flexDirection;
+          gap: $sm-gap;
+
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        .distribution__buttons {
+          @include flexDirection;
+          gap: $sm-gap;
+
+          button {
+            @include button;
+            width: 100%;
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .right__distribution {
+        @include flexAlign;
+        justify-content: center;
+        width: 50px;
+        .img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__distribution {
+    padding: 35% $sm-gap 8% $sm-gap;
+
+    .distribution__container {
+      @include flexDirection;
+      flex-direction: column;
+      gap: $md-gap;
+
+      .left__distribution {
+        @include flexDirection;
+        gap: $md-gap;
+
+        .distribution__text {
+          @include flexDirection;
+          gap: $md-gap;
+
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+
+        .distribution__buttons {
+          @include flexDirection;
+          gap: $md-gap;
+
+          button {
+            @include button;
+            width: 100%;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .right__distribution {
+        @include flexAlign;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__distribution {
+    padding: 30% $md-gap 7% $md-gap;
+
+    .distribution__container {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $lg-gap;
+
+      .left__distribution {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        .distribution__text {
+          @include flexDirection;
+          gap: $lg-gap;
+
+          h1 {
+            font-size: 3rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .distribution__buttons {
+          @include flexDirection;
+          gap: $lg-gap;
+
+          button {
+            @include button;
+            width: auto;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .right__distribution {
+        @include flexAlign;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__distribution {
+    padding: 35% $md-gap 10% $md-gap;
+
+    .distribution__container {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $lg-gap;
+
+      .left__distribution {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        .distribution__text {
+          @include flexDirection;
+          gap: $lg-gap;
+
+          h1 {
+            font-size: 3.5rem;
+          }
+
+          p {
+            font-size: 1.3rem;
+          }
+        }
+
+        .distribution__buttons {
+          @include flexDirection;
+          gap: $lg-gap;
+
+          button {
+            @include button;
+            width: auto;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .right__distribution {
+        @include flexAlign;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__distribution {
+    padding: 40% $md-gap 10% $md-gap;
+
+    .distribution__container {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $lg-gap;
+
+      .left__distribution {
+        @include flexDirection;
+        gap: $lg-gap;
+
+        .distribution__text {
+          @include flexDirection;
+          gap: $lg-gap;
+
+          h1 {
+            font-size: 4rem;
+          }
+
+          p {
+            font-size: 1.3rem;
+          }
+        }
+
+        .distribution__buttons {
+          @include flexDirection;
+          gap: $lg-gap;
+
+          button {
+            @include button;
+            width: auto;
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .right__distribution {
+        @include flexAlign;
+        justify-content: flex-end;
+      }
+    }
+  }
+}

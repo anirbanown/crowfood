@@ -1,0 +1,111 @@
+@import "./Styles/variables";
+@import "./Styles/constant";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Product Sans", sans-serif;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.app__sttop {
+  background: $elementary-color;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  color: $neutral;
+  opacity: 0;
+  transition: $trans;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  a {
+    height: 100%;
+    width: 100%;
+    @include flexCenter;
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__sttop {
+    right: 20px;
+    height: 40px;
+    width: 40px;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__sttop {
+    right: 30px;
+    height: 45px;
+    width: 45px;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__sttop {
+    right: 40px;
+    height: 50px;
+    width: 50px;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__sttop {
+    right: 50px;
+    height: 50px;
+    width: 50px;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__sttop {
+    right: 50px;
+    height: 50px;
+    width: 50px;
+
+    a {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,309 @@
+@import "./constant";
+@import "./variables";
+
+.feature__controls {
+  width: 70%;
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $secondary-color;
+  padding: $md-gap;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+  .control__container {
+    width: 100%;
+    @include flexDirection;
+    gap: $lg-gap;
+
+    .control__text {
+      @include flexDirection;
+      gap: $lg-gap;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        color: $primary-color;
+      }
+
+      p {
+        color: $neutral-color;
+        font-size: 1.3rem;
+      }
+
+      button {
+        @include button;
+        background: $primary-color;
+        width: fit-content;
+        color: $secondary-color;
+        align-self: center;
+      }
+    }
+
+    .control__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: $lg-gap;
+
+      .control {
+        background: $primary-color;
+        padding: $lg-gap;
+        border-radius: 20px;
+        @include flexCenter;
+        gap: $lg-gap;
+        flex-direction: column;
+        color: $secondary-color;
+
+        .control__icon {
+          width: 30px;
+          height: 30px;
+          background: $elementary-color;
+          box-shadow: $elementary-shadow;
+          @include flexCenter;
+          border-radius: 50%;
+        }
+
+        .control__text__content {
+          @include flexAlign;
+          flex-direction: column;
+          text-align: center;
+
+          p {
+            font-weight: bold;
+          }
+
+          span {
+            color: $neutral-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .feature__controls {
+    width: 90%;
+    bottom: -30%;
+    padding: $sm-gap;
+    border-radius: 15px;
+    box-shadow: none;
+
+    .control__container {
+      @include flexDirection;
+      flex-direction: column;
+      gap: $sm-gap;
+
+      .control__text {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        button {
+          @include button;
+          padding: 0 1rem;
+          height: 35px;
+        }
+      }
+
+      .control__content {
+        grid-template-columns: 1fr;
+        gap: $sm-gap;
+
+        .control {
+          padding: $sm-gap;
+          .control__icon {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .feature__controls {
+    width: 85%;
+    bottom: -35%;
+    padding: $md-gap;
+    border-radius: 18px;
+
+    .control__container {
+      @include flexDirection;
+      flex-direction: column;
+      gap: $md-gap;
+
+      .control__text {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        button {
+          @include button;
+          padding: 0 1.5rem;
+          height: 37px;
+        }
+      }
+
+      .control__content {
+        grid-template-columns: 1fr 1fr;
+        gap: $md-gap;
+
+        .control {
+          padding: $md-gap;
+          .control__icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .feature__controls {
+    width: 80%;
+    bottom: -30%;
+    padding: $lg-gap;
+    border-radius: 20px;
+
+    .control__container {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $lg-gap;
+
+      .control__text {
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        button {
+          @include button;
+          padding: 0 1.75rem;
+          height: 38px;
+        }
+      }
+
+      .control__content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $lg-gap;
+
+        .control {
+          padding: $lg-gap;
+          .control__icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .feature__controls {
+    width: 70%;
+    bottom: -40%;
+    padding: $md-gap;
+    border-radius: 20px;
+
+    .control__container {
+      @include flexDirection;
+      gap: $lg-gap;
+
+      .control__text {
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+
+        button {
+          @include button;
+          padding: 0 2rem;
+          height: 40px;
+        }
+      }
+
+      .control__content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $lg-gap;
+
+        .control {
+          padding: $lg-gap;
+          .control__icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .feature__controls {
+    width: 70%;
+    bottom: -40%;
+    padding: $md-gap;
+    border-radius: 20px;
+
+    .control__container {
+      @include flexDirection;
+      gap: $lg-gap;
+
+      .control__text {
+        h1 {
+          font-size: 4rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+
+        button {
+          @include button;
+          padding: 0 2rem;
+          height: 40px;
+        }
+      }
+
+      .control__content {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $lg-gap;
+
+        .control {
+          padding: $lg-gap;
+          .control__icon {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}

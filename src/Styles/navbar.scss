@@ -1,0 +1,161 @@
+@import "./constant";
+@import "./variables";
+
+.app__navbar {
+  @include flexBetween;
+  height: 70px;
+  padding: 0 $md-gap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: $trans;
+  color: $secondary-color;
+  z-index: 2;
+
+  &.active {
+    background: hsl(0 0% 100% / 0.8);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    color: $primary-color;
+  }
+
+  .navbar__logo {
+    @include logo;
+  }
+
+  .navbar__routes {
+    @include routes;
+  }
+
+  .navbar__buttons {
+    @include flexAlign;
+    gap: $lg-gap;
+
+    button {
+      @include button;
+      background: $secondary-color;
+      color: $primary-color;
+
+      &.onebtn {
+        background: transparent;
+      }
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__navbar {
+    height: 60px;
+    padding: 0 $sm-gap;
+
+    .navbar__routes {
+      @include flexDirection;
+      flex-direction: column;
+      gap: $sm-gap;
+      display: none; // Hide routes on small screens for better layout
+
+      // Show on menu button click if needed
+      &.active {
+        display: flex;
+      }
+    }
+
+    .navbar__buttons {
+      gap: $sm-gap;
+      button {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__navbar {
+    height: 65px;
+    padding: 0 $sm-gap;
+
+    .navbar__routes {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $sm-gap;
+      display: flex;
+    }
+
+    .navbar__buttons {
+      gap: $md-gap;
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__navbar {
+    height: 70px;
+    padding: 0 $md-gap;
+
+    .navbar__routes {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $md-gap;
+      display: flex;
+    }
+
+    .navbar__buttons {
+      gap: $lg-gap;
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__navbar {
+    height: 70px;
+    padding: 0 $md-gap;
+
+    .navbar__routes {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $lg-gap;
+      display: flex;
+    }
+
+    .navbar__buttons {
+      gap: $lg-gap;
+      button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__navbar {
+    height: 70px;
+    padding: 0 $md-gap;
+
+    .navbar__routes {
+      @include flexDirection;
+      flex-direction: row;
+      gap: $lg-gap;
+      display: flex;
+    }
+
+    .navbar__buttons {
+      gap: $lg-gap;
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

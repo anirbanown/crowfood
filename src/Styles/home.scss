@@ -1,0 +1,223 @@
+@import "./constant";
+@import "./variables";
+
+.app__home {
+  height: 130vh;
+  background: $primary-color;
+  padding: $ex-gap $md-gap;
+  @include flexDirection;
+  gap: 3rem;
+
+  .home__text {
+    text-align: center;
+
+    h1 {
+      @include textGradient;
+      font-size: 5rem;
+    }
+  }
+
+  .ticks__container {
+    @include flexCenter;
+    color: $secondary-color;
+    gap: $lg-gap;
+
+    p {
+      @include flexAlign;
+      gap: $t-gap;
+      color: $neutral-color;
+
+      span {
+        @include flexCenter;
+        height: 20px;
+        width: 20px;
+        background: $secondary-color;
+        border-radius: 5px;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .input__container {
+    @include inputContainer;
+
+    button {
+      background: $secondary-color;
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__home {
+    height: 50vh;
+    padding: 5rem 2rem;
+
+    .home__text {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .ticks__container {
+      flex-direction: column;
+      gap: $sm-gap;
+
+      p {
+        font-size: 1rem;
+        span {
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+
+    .input__container {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__home {
+    height: auto;
+    padding: $sm-gap $md-gap;
+    gap: 2rem;
+
+    .home__text {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    .ticks__container {
+      flex-direction: column;
+      gap: $md-gap;
+
+      p {
+        font-size: 1.2rem;
+        span {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+
+    .input__container {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__home {
+    height: auto;
+    padding: $md-gap $lg-gap;
+    gap: 2.5rem;
+
+    .home__text {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    .ticks__container {
+      flex-direction: row;
+      gap: $lg-gap;
+
+      p {
+        font-size: 1.3rem;
+        span {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .input__container {
+      width: 80%;
+      button {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__home {
+    height: 130vh;
+    padding: $md-gap $lg-gap;
+    gap: 2.5rem;
+
+    .home__text {
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
+
+    .ticks__container {
+      flex-direction: row;
+      gap: $lg-gap;
+
+      p {
+        font-size: 1.4rem;
+        span {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .input__container {
+      width: 70%;
+      button {
+        width: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__home {
+    height: 130vh;
+    padding: $ex-gap $md-gap;
+    gap: 3rem;
+
+    .home__text {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+
+    .ticks__container {
+      flex-direction: row;
+      gap: $lg-gap;
+
+      p {
+        font-size: 1.5rem;
+        span {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .input__container {
+      width: 60%;
+      button {
+        width: auto;
+      }
+    }
+  }
+}

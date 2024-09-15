@@ -1,0 +1,309 @@
+@import "./constant";
+@import "./variables";
+
+.app__feature {
+  background: $primary-color;
+  padding: $md-gap $md-gap 20% $md-gap;
+  position: relative;
+
+  .feature__container {
+    @include flexAlign;
+    gap: $lg-gap;
+
+    .left__feature {
+      flex: 1;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .right__feature {
+      flex: 1;
+      gap: $lg-gap;
+      @include flexDirection;
+
+      .right__text {
+        gap: $lg-gap;
+        @include flexDirection;
+
+        h1 {
+          font-size: 4rem;
+          color: $secondary-color;
+        }
+
+        p {
+          font-size: 1.3rem;
+          color: $neutral-color;
+        }
+      }
+
+      .feature__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $lg-gap;
+
+        .feature {
+          @include flexRow;
+          gap: $sm-gap;
+
+          svg {
+            height: 20px;
+            min-width: 20px;
+            border-radius: 5px;
+            background: $elementary-color;
+          }
+
+          .feature__text {
+            p {
+              color: $secondary-color;
+              font-weight: bold;
+            }
+
+            span {
+              color: $neutral-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries for Responsiveness
+@media (max-width: 480px) {
+  // Mobile Portrait
+  .app__feature {
+    padding: 1rem 1rem 35rem 1rem;
+
+    .feature__container {
+      flex-direction: column;
+      gap: $sm-gap;
+
+      .left__feature {
+        img {
+          width: 100%;
+        }
+      }
+
+      .right__feature {
+        gap: $sm-gap;
+
+        .right__text {
+          gap: $sm-gap;
+
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        .feature__content {
+          grid-template-columns: 1fr;
+          gap: $sm-gap;
+
+          .feature {
+            gap: $sm-gap;
+
+            svg {
+              height: 15px;
+              min-width: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // Mobile Landscape
+  .app__feature {
+    padding: $sm-gap;
+
+    .feature__container {
+      flex-direction: column;
+      gap: $md-gap;
+
+      .left__feature {
+        img {
+          width: 90%;
+        }
+      }
+
+      .right__feature {
+        gap: $md-gap;
+
+        .right__text {
+          gap: $md-gap;
+
+          h1 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+          }
+        }
+
+        .feature__content {
+          grid-template-columns: 1fr;
+          gap: $md-gap;
+
+          .feature {
+            gap: $md-gap;
+
+            svg {
+              height: 18px;
+              min-width: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  // Tablet
+  .app__feature {
+    padding: $md-gap;
+
+    .feature__container {
+      gap: $lg-gap;
+
+      .left__feature {
+        img {
+          width: 85%;
+        }
+      }
+
+      .right__feature {
+        gap: $lg-gap;
+
+        .right__text {
+          gap: $lg-gap;
+
+          h1 {
+            font-size: 3rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .feature__content {
+          grid-template-columns: 1fr 1fr;
+          gap: $lg-gap;
+
+          .feature {
+            gap: $lg-gap;
+
+            svg {
+              height: 18px;
+              min-width: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  // Small Desktops
+  .app__feature {
+    padding: $md-gap $md-gap 15% $md-gap;
+
+    .feature__container {
+      gap: $lg-gap;
+
+      .left__feature {
+        img {
+          width: 80%;
+        }
+      }
+
+      .right__feature {
+        gap: $lg-gap;
+
+        .right__text {
+          gap: $lg-gap;
+
+          h1 {
+            font-size: 3.5rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .feature__content {
+          grid-template-columns: 1fr 1fr;
+          gap: $lg-gap;
+
+          .feature {
+            gap: $lg-gap;
+
+            svg {
+              height: 18px;
+              min-width: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  // Large Desktops
+  .app__feature {
+    padding: $md-gap $md-gap 20% $md-gap;
+
+    .feature__container {
+      gap: $lg-gap;
+
+      .left__feature {
+        img {
+          width: 80%;
+        }
+      }
+
+      .right__feature {
+        gap: $lg-gap;
+
+        .right__text {
+          gap: $lg-gap;
+
+          h1 {
+            font-size: 4rem;
+          }
+
+          p {
+            font-size: 1.3rem;
+          }
+        }
+
+        .feature__content {
+          grid-template-columns: 1fr 1fr;
+          gap: $lg-gap;
+
+          .feature {
+            gap: $lg-gap;
+
+            svg {
+              height: 20px;
+              min-width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
