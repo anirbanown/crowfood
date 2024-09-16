@@ -47,13 +47,16 @@ export const controls = [
   {
     name: "Memory Cards",
     icon: SiGooglepodcasts,
+    link: '',
   },
   {
     name: "Spinning Wheel",
     icon: AiFillCloud,
+    link: 'https://sansthaein-aur-samvidhan-spin-wheel.vercel.app/',
   },
   {
     name: "Play to earn on Web 3",
     icon: AiOutlineClockCircle,
+    link: '',
   },
 ];

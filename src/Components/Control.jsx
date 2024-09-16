@@ -49,6 +49,7 @@ const Control = () => {
         </div>
         <div className="control__content">
           {controls.map((control, index) => (
+            <a href={control.link}>
             <div className="control" key={index}>
               <div className="control__icon">
                 <control.icon />
@@ -62,6 +63,7 @@ const Control = () => {
                 </span>
               </div>
             </div>
+            </a>
           ))}
         </div> 
       </div>
