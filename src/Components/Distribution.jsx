@@ -62,8 +62,8 @@ const Distribution = () => {
   return (
     <div className="app__distribution">
       <div className="btns">
-        <button class="btn-donate">Donate now 1</button>
-        <button class="btn-donate">Donate now 2</button>
+        <button class="btn-donate">Quiz Time !</button>
+        <button class="btn-donate">Progress Analytics</button>
       </div>
       <div className="txt">
         <h1>Achieve Milestones and Get Certified</h1></div>
@@ -79,10 +79,9 @@ const Distribution = () => {
         <motion.div variants={item1} className="left__distribution">
 
           <div className="distribution__text">
-            <h1>Gamified Learning On Phone Also</h1>
+            <h1>Experience 3D Animations & Virtual Reality</h1>
             <p>
-              We are Launching Our Android Application To let Users Enjoy and Learn Anytime & Anywhere. As The Access of Constitution & Laws is very important and Needs to be known anytime anywhere.
-            </p>
+              Get Exclusive AR / VR experience on Our Android Application to Understand Constitution in a better way with Flow Charts, Animations and Lot More of a Gamified Experience            </p>
           </div>
           <div className="distribution__buttons">
             <button>

@@ -34,9 +34,7 @@ const DashboardPreview = () => {
   return (
     <motion.div
       ref={ref}
-      initial="hidden"
       variants={variants}
-      animate={control}
       className="app__dashboard"
     >
       <img src={dashboard} alt="" draggable={false} />
