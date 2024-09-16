@@ -6,6 +6,9 @@ import { twophones } from "../Images";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { certi } from "../Images";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Distribution = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -18,6 +21,27 @@ const Distribution = () => {
     }
   }, [control, inView]);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // You can adjust the animation duration here
+      once: true,     // Whether animation should happen only once
+    });
+  }, []);
+
+  const variants = {
+    vissible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+      },
+    },
+
+    hidden: {
+      opacity: 0,
+      scale: 0,
+    },
+  };
   const list = {
     vissible: {
       opacity: 1,
@@ -58,17 +82,22 @@ const Distribution = () => {
       x: 100,
     },
   };
-
   return (
     <div className="app__distribution">
       <div className="btns">
-        <button class="btn-donate">Quiz Time !</button>
-        <button class="btn-donate">Progress Analytics</button>
+        <button class="btn-donate" data-aos="fade-right">Quiz Time !</button>
+        <button class="btn-donate" data-aos="fade-left">Progress Analytics</button>
       </div>
       <div className="txt">
         <h1>Achieve Milestones and Get Certified</h1></div>
       <div className="certi">
-        <img src={certi} alt="" />
+      <motion.div
+      ref={ref}
+      initial="hidden"
+      variants={variants}
+      animate={control}
+    >
+        <img src={certi} alt="" /></motion.div>
       </div>
       <motion.div
         ref={ref}

@@ -22,6 +22,38 @@ const Control = () => {
       scale: 0,
     },
   };
+  const item1 = {
+    vissible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stifness: 300,
+        damping: 24,
+        delay: 0.5,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+  };
+  const item2 = {
+    vissible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stifness: 300,
+        damping: 24,
+        delay: 0.5,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 100,
+    },
+  };
 
   useEffect(() => {
     if (inView) {
@@ -49,23 +81,24 @@ const Control = () => {
         </div>
         <div className="control__content">
           {controls.map((control, index) => (
-            <a href={control.link}>
-            <div className="control" key={index}>
-              <div className="control__icon">
-                <control.icon />
-              </div>
 
-              <div className="control__text__content">
-                <p>{control.name}</p>
-                <span>
-                  {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <a href={control.link}>
+              <div className="control" key={index}>
+                <div className="control__icon">
+                  <control.icon />
+                </div>
+
+                <div className="control__text__content">
+                  <p>{control.name}</p>
+                  <span>
+                    {/* Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Dolore, quos. */}
-                </span>
+                  </span>
+                </div>
               </div>
-            </div>
             </a>
           ))}
-        </div> 
+        </div>
       </div>
     </motion.div>
   );

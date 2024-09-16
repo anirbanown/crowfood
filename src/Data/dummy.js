@@ -47,7 +47,7 @@ export const controls = [
   {
     name: "Memory Cards",
     icon: SiGooglepodcasts,
-    link: '',
+    link: 'https://sansthaein-aur-samvidhan-memory-card.vercel.app/',
   },
   {
     name: "Spinning Wheel",
