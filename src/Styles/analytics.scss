@@ -4,7 +4,7 @@
 .app__analytics {
   height: fit-content;
   background: $secondary-color;
-  padding: 35% $md-gap 10% $md-gap;
+  padding: 5% $md-gap 10% $md-gap;
 
   .analytics__container {
     @include flexAlign;
@@ -54,6 +54,12 @@
               box-shadow: $shadow;
               @include textGradient;
             }
+          }
+        }
+        .analytic__container:hover{
+          scale: 1;
+          .analytics__icon{
+            scale: 1.1;
           }
         }
       }

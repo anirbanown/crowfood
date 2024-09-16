@@ -27,6 +27,7 @@ const Feature = () => {
       opacity: 0,
     },
   };
+  
   const item1 = {
     vissible: {
       opacity: 1,

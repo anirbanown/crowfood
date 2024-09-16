@@ -45,7 +45,7 @@ const Home = () => {
             ref={ref}
             className="home__text"
           >
-            <motion.h1 variants={item}>Sansthaein Aur Samvidhan</motion.h1>
+            <motion.h1 variants={item} className="">Sansthaein Aur Samvidhan</motion.h1>
             <h3>Your gateway to understanding and engaging with the Constitution of India in an interactive and enjoyable way</h3>
           </motion.div>
         </div>

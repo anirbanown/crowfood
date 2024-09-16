@@ -4,6 +4,7 @@ import { dashboard } from "../Images";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+
 const DashboardPreview = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();

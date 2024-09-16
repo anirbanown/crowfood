@@ -3,11 +3,12 @@
 
 .app__dashboard {
   width: 70%;
-  position: absolute;
+  
+  // position: absolute;
   bottom: -80%;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: -300px auto;
 
   img {
     width: 100%;

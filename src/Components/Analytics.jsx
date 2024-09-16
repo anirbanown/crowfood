@@ -5,6 +5,10 @@ import { analytics } from "../Data/dummy";
 import { onephone } from "../Images";
 import "../Styles/analytics.scss";
 
+import {GiInjustice } from 'react-icons/gi'
+import { FaUserTie } from "react-icons/fa";
+import { RiGovernmentFill } from "react-icons/ri";
+
 const Analytics = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -77,12 +81,18 @@ const Analytics = () => {
             </p>
           </div>
           <div className="left__analytics__container">
-            {analytics.map((analytic, index) => (
-              <div className="analytic__container" key={index}>
-                <div className="analytics__icon">{analytic.desc}</div>
-                <p>{analytic.name}</p>
+          <div className="analytic__container" key='0'>
+                <div className="analytics__icon"> <FaUserTie fontSize='1.4em'/></div>
+                <p>Executive</p>
               </div>
-            ))}
+              <div className="analytic__container" key='1'>
+                <div className="analytics__icon ">< RiGovernmentFill fontSize='1.6em' /></div>
+                <p>Legislative</p>
+              </div>
+              <div className="analytic__container" key='2'>
+                <div className="analytics__icon"><GiInjustice fontSize='1.6em'/></div>
+                <p>Judiciary</p>
+              </div>
           </div>
         </motion.div>
         <motion.div variants={item2} className="right__analytics">
