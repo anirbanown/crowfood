@@ -15,6 +15,7 @@
     "react-markdown": "^9.0.1",
     "react-scripts": "5.0.1",
     "sass": "^1.57.1",
+    "start": "^5.1.0",
     "vanilla-tilt": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

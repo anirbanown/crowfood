@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .section__padding {
   padding: 2rem 4rem;
@@ -120,7 +117,7 @@ backdrop-filter: blur(10px);
 backdrop-filter: blur(5px);
 }
 .bg-bharatiai-hover{
-  box-shadow: 0 0 15px 0 #0bcd11;
+  box-shadow: 0 0 15px 0 #2f00ff;
 }
 .w-control{
   width: 160px;

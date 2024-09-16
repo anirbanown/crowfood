@@ -34,10 +34,10 @@ function Chat() {
     setAnswer("Loading your Personalized Answer...");
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${gemi}`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBqi9tPth3tQlaWJyRzU-SVEDr3-qY9bds`,
         method: "post",
         data: {
-          contents: [{ parts: [{ text: "You are Bharati, an AI Assistant for our ecommerce marketplace named BharatSe. talk as a friend and also as a customer support executive. We are a platform that sells various Indian ethnic and heritage products across the world. We specialize in Clothings, food etc. You must answer signifying and promoting the various traditional items of India. Answer politely and Use Emojis but answer short and crisp manner. Also don't answer any questions unrelated to the shopping or our e commerce platform. Politely reject the answer for any other questions" + question }] }],
+          contents: [{ parts: [{ text: "You are Vidhi, an AI Assistant for our a gamified platform which aims to simplify the language of the Constitution of India named 'Sansthaein Aur Samvidhan'. talk as a friend and also as a customer support executive. We are a platform that Simplifications of the Articles of the Constitution of India : o Comprises of Chapters of Constitution of India pertaining to Legislature, Executive & Judiciary (Part V & Part VI ). You must answer signifying and promoting Gamified User Experience with the Spin a Wheel, Memory Cards game, Quiz game, Progress Analytics, Quizes, Animations. Answer politely and Use Emojis but answer short and crisp manner. Also don't answer any questions unrelated to the shopping or our platform. Politely reject the answer for any other questions" + question }] }],
         },
       });
 
@@ -62,10 +62,10 @@ function Chat() {
   return (
     <div className=''>
       {/* Floating Button with Icons */}
-      <div className={`${isHover?'bg-bharatiai-hover':''} fixed z-9999 bottom-8 right-8 h-max w-max border-2 border-green-500 flex flex-row rounded-5xl justify-end items-center shadow-lg bg-bharatiai  transition-all  duration-350`}>
-        <div className={`text-2xl text-orange-600 flex justify-center items-center w-control h-control  transition-all delay-150 duration-350 overflow-x-hidden`}>Bharati<span className="text-green-600">.AI</span></div>
+      <div className={`${isHover?'bg-bharatiai-hover':''} fixed z-9999 bottom-8 right-8 h-max w-max border-2 text-[#fab466] flex flex-row rounded-5xl justify-end items-center shadow-lg bg-bharatiai  transition-all  duration-350`}>
+        <div className={`text-2xl text-violet-600 flex justify-center items-center w-control h-control  transition-all delay-150 duration-350 overflow-x-hidden`}>Vidhi<span className="text-[#fab466]">.AI</span></div>
         <div
-          className="w-max p-4 text-white transition-all duration-300 transform bg-orange-500 rounded-full cursor-pointer z-9999 scale-110 hover:bg-orange-600 hover:scale-125"
+          className="w-max p-4 text-white transition-all duration-300 transform bg-violet-600 rounded-full cursor-pointer z-9999 scale-110 hover:bg-violet-600 hover:scale-125"
           onClick={() => setIsOpen(!isOpen)}
           onMouseEnter={()=>setIsHover(true)}
           onMouseLeave={()=>{!isOpen && setIsHover(false)}}
@@ -88,8 +88,8 @@ function Chat() {
         style={{ transformOrigin: "bottom right" }} // Animation origin for smooth open/close
       >
         {/* Heading with Animation */}
-        <h2 className="mb-4 text-2xl font-bold text-orange-500">
-          Personalized <span className='text-green-600'>AI Assistant</span> 
+        <h2 className="mb-4 text-2xl font-bold text-violet-600">
+          Personalized <span className='text-[#fab466]'>AI Assistant</span> 
         </h2>
 
         <form onSubmit={generateAnswer} className="flex flex-col flex-grow">
@@ -103,7 +103,7 @@ function Chat() {
           ></textarea>
           <button
             type="submit"
-            className={`bg-orange-500 hover:bg-orange-700 text-white p-3 rounded-md mt-2 transition-all duration-300 genarate ${
+            className={`bg-violet-600 hover:bg-violet-800 text-white p-3 rounded-md mt-2 transition-all duration-300 genarate ${
               generatingAnswer ? 'opacity-50 cursor-not-allowed' : ''
             }`}
             disabled={generatingAnswer}

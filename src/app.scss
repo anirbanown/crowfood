@@ -24,8 +24,8 @@ html {
   border-radius: 50%;
   cursor: pointer;
   position: fixed;
-  bottom: 20px;
-  right: 50px;
+  bottom: 100px;
+  right: 40px;
   color: $neutral;
   opacity: 0;
   transition: $trans;
@@ -47,7 +47,7 @@ html {
 @media (max-width: 480px) {
   // Mobile Portrait
   .app__sttop {
-    right: 20px;
+    right: 40px;
     height: 40px;
     width: 40px;
 
@@ -61,7 +61,7 @@ html {
 @media (min-width: 481px) and (max-width: 767px) {
   // Mobile Landscape
   .app__sttop {
-    right: 30px;
+    right: 40px;
     height: 45px;
     width: 45px;
 
@@ -89,7 +89,7 @@ html {
 @media (min-width: 1025px) and (max-width: 1440px) {
   // Small Desktops
   .app__sttop {
-    right: 50px;
+    right: 40px;
     height: 50px;
     width: 50px;
 
@@ -103,7 +103,7 @@ html {
 @media (min-width: 1441px) {
   // Large Desktops
   .app__sttop {
-    right: 50px;
+    right: 40px;
     height: 50px;
     width: 50px;
 
