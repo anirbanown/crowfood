@@ -10,6 +10,7 @@ import {
   Navbar,
   STTop,
 } from "./Components";
+import Chat from "./Components/Chat.jsx"
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Distribution />
       <Footer />
       <STTop />
+      <Chat/>
     </div>
   );
 };
