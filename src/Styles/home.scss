@@ -9,14 +9,36 @@
   gap: 3rem;
 
   .home__text {
-    text-align: center;
-
+    text-align: left;
     h1 {
       @include textGradient;
       font-size: 5rem;
     }
   }
-
+.top-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: -10vh;
+}
+.container{
+  width: 30vw;
+  height: 50vh;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 80px;
+}
+.right{
+  margin-top: -40px;
+}
+.Left{
+  margin-top: 100px;
+}
+.right img{
+  width: 300px;
+  margin-left: 10vw;
+}
   .ticks__container {
     @include flexCenter;
     color: $secondary-color;

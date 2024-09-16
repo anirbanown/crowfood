@@ -4,7 +4,8 @@ import { TiTick } from "react-icons/ti";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
+import { AiOutlineFontSize } from "react-icons/ai";
+import { constitution } from "../Images";
 const Home = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -35,7 +36,9 @@ const Home = () => {
 
   return (
     <div className="app__home" id="home">
-      <motion.div
+      <div className="top-container">
+        <div className="Left container">
+        <motion.div
         initial="hidden"
         animate={control}
         variants={list}
@@ -44,8 +47,13 @@ const Home = () => {
       >
         <motion.h1 variants={item}>Sansthaein Aur Samvidhan</motion.h1>
         {/* <motion.h1 variants={item}>More Powerfull</motion.h1> */}
+        <h3>Hello I'm Sansthaein</h3>
       </motion.div>
-      
+        </div>
+        <div className="right container">
+        <img src={constitution} alt="" />
+        </div>
+      </div> 
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { BsApple } from "react-icons/bs";
 import { twophones } from "../Images";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import { certi } from "../Images";
 const Distribution = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -61,6 +61,15 @@ const Distribution = () => {
 
   return (
     <div className="app__distribution">
+      <div className="btns">
+        <button class="btn-donate">Donate now 1</button>
+        <button class="btn-donate">Donate now 2</button>
+      </div>
+      <div className="txt">
+        <h1>Achieve Milestones and Get Certified</h1></div>
+      <div className="certi">
+        <img src={certi} alt="" />
+      </div>
       <motion.div
         ref={ref}
         animate={control}
@@ -68,6 +77,7 @@ const Distribution = () => {
         className="distribution__container"
       >
         <motion.div variants={item1} className="left__distribution">
+
           <div className="distribution__text">
             <h1>Gamified Learning On Phone Also</h1>
             <p>
