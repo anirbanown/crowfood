@@ -24,7 +24,7 @@ const Distribution = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // You can adjust the animation duration here
-      once: true,     // Whether animation should happen only once
+      once: false,     // Whether animation should happen only once
     });
   }, []);
 
@@ -85,21 +85,17 @@ const Distribution = () => {
   return (
     <div className="app__distribution">
       <div className="btns">
+        <a href="https://sansthaein-aur-samvidhan-quiz.vercel.app/">
         <button class="btn-donate" data-aos="fade-right">Quiz Time !</button>
+        </a>
         <a href="https://sansthaein-aur-samvidhan-analytics.vercel.app/">
         <button class="btn-donate" data-aos="fade-left">Progress Analytics</button>
         </a>
       </div>
       <div className="txt">
         <h1>Achieve Milestones and Get Certified</h1></div>
-      <div className="certi">
-      <motion.div
-      ref={ref}
-      initial="hidden"
-      variants={variants}
-      animate={control}
-    >
-        <img src={certi} alt="" /></motion.div>
+      <div className="certi"> 
+        <img src={certi} alt="" data-aos="zoom-in" />
       </div>
       <motion.div
         ref={ref}
