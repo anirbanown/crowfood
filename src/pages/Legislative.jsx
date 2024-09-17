@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import "../Styles/home.scss";
 import '../Styles/executive.scss'
 
+import { LegislativeData } from './data';
+
 import { TiTick } from "react-icons/ti";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -38,27 +40,57 @@ const Legislative=()=> {
   
 
   return (
-    <div> <div className="primary-bg-section bg-ht"></div>
+    <div>
+    {" "}
+    <div className="primary-bg-section bg-ht"></div>
     <div className="app__home1 flex flex-col h-max" id="home">
-      
       <div className="top-container h-screen">
-      <motion.div
-            initial="hidden"
-            animate={control}
-            variants={list}
-            ref={ref}
-            className="home__text" >
-            <motion.h1 variants={item} className="">Legislative</motion.h1>
-            <h3>Your gateway to understanding and engaging with the Constitution of India in an interactive and enjoyable way</h3>
-          </motion.div>
+        <motion.div
+          initial="hidden"
+          animate={control}
+          variants={list}
+          ref={ref}
+          className="home__text"
+        >
+          <motion.h1 variants={item} className="">
+            Legislative
+          </motion.h1>
+          <h3>
+            Your gateway to understanding and engaging with the Constitution
+            of India in an interactive and enjoyable way
+          </h3>
+        </motion.div>
       </div>
-      <div className='h-screen'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae officia laborum sit aut praesentium dolorum repellendus facere velit laudantium odio modi dolore, fuga, itaque perspiciatis! Nisi molestiae maxime ratione doloremque!
-        Culpa eos harum debitis tempore minima, iusto odio incidunt atque nobis ducimus, molestiae blanditiis alias pariatur excepturi, molestias magnam voluptatum! Necessitatibus soluta expedita doloribus saepe hic a, explicabo commodi! Dignissimos.
+      <div className="h-max">
+        {LegislativeData.map((article) => (
+          <div className="article">
+            <h2 className=" text-5xl mb-4">{article.heading}</h2>
+            <p className="text-lg">
+              {article.info}
+            </p>
+            <h3 className="text-3xl mb-1 mt-8">Overview</h3>
+            <p>
+              {article.overview}
+             
+            </p>
+            <h3 className="text-3xl mb-1 mt-8">Key Points</h3>
+            {article.keypoints.map((point) => (
+              <div className="keypoint">
+                <h4 className="text-2xl ml-4 my-1">{point.id}. {point.h4}</h4>
+                {point.subpoints.map((points) => (
+                  <p className="ml-9">
+                    <span className="font-bold">{points.head}:</span>{" "}
+                    {points.text}
+                  </p>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
+        
       </div>
-      
     </div>
-    </div>
+  </div>
   )
 }
 

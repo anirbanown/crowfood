@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 import { AiOutlineFontSize } from "react-icons/ai";
 import { constitution } from "../Images";
 
-import ExecutiveData from "./data";
+import {ExecutiveData} from "./data";
 
 const Executive = () => {
   const control = useAnimation();
