@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { routes } from "../Data/dummy";
 import "../Styles/navbar.scss";
+import logo_lotus from '../Images/logo_lotus.png'
 
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -23,8 +24,9 @@ const Navbar = () => {
 
   return (
     <div className={bgColor ? "app__navbar active" : "app__navbar"}>
-      <div className="navbar__logo">
-        <p>D'task</p>
+      <div className="navbar__logo flex flex-row items-center">
+        <img src={logo_lotus} className="h-20 aspect-ratio-1 object-cover mr-3" alt="" />
+        <p>Sansthaein Aur Samvidhan</p>
       </div>
       <ul className="navbar__routes">
         {routes.map((route, index) => (
@@ -52,7 +54,7 @@ const Navbar = () => {
             style={{
               color: bgColor ? "#0c1727" : "white",
             }}
-            className="onebtn"
+            className="onebtn text-hover-gradient"
             onClick={() => loginWithRedirect()}
           >
             Login
@@ -60,6 +62,7 @@ const Navbar = () => {
           <button
             style={{
               background: bgColor ? "transparent" : "white",
+              
             }}
             className="twobtn"
             onClick={() => loginWithRedirect({authorizationParams: { screen_hint: "signup" }})}

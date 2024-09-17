@@ -41,14 +41,14 @@
     }
     .twobtn{
       background: white;
-    color: $primary-color;
+   color: #0c1727;
   }
 
     .onebtn {
       background: transparent;
     }
 
-    .onebtn:hover{
+    .text-hover-gradient:hover{
       @include textGradient;
     }
   }

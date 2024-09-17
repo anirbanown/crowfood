@@ -3,14 +3,16 @@ import "../Styles/Footer.scss";
 import { routes } from "../Data/dummy";
 import { FaFacebookF } from "react-icons/fa";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
+import logo_full_white from '../Images/logo_full_white.png'
 
 const Footer = () => {
   return (
     <div className="app__footer">
       <div className="footer__container">
         <div className="footer__top">
-          <div className="logo">
-            <p>D'task</p>
+        
+        <div className="logo">
+        <img src={logo_full_white} className="h-16 w-max" alt="" />
           </div>
           <div className="footer__cta">
             <p>Ready to get Started?</p>
