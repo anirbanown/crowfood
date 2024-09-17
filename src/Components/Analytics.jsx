@@ -91,18 +91,20 @@ const Analytics = () => {
             </p>
           </div>
           <div className="left__analytics__container flex my-5">
-          <div className="analytic__container" key='0'>
-                <div className="analytics__icon"> <FaUserTie fontSize='1.4em'/></div>
-                <p>Executive</p>
-              </div>
-              <div className="analytic__container" key='1'>
+          <a href="/executive" className="w-max h-max"><div className="analytic__container" key='0'>
+            
+                  <div className="analytics__icon"> <FaUserTie fontSize='1.4em'/></div>
+                  <p>Executive</p>
+         
+              </div> </a>
+              <a href="/legislative" className="w-max h-max">  <div className="analytic__container" key='1'>
                 <div className="analytics__icon ">< RiGovernmentFill fontSize='1.6em' /></div>
                 <p>Legislative</p>
-              </div>
-              <div className="analytic__container" key='2'>
+              </div></a>
+              <a href="/judiciary" className="w-max h-max">     <div className="analytic__container" key='2'>
                 <div className="analytics__icon"><GiInjustice fontSize='1.6em'/></div>
                 <p>Judiciary</p>
-              </div>
+              </div></a>
           </div>
         </motion.div>
         <motion.div variants={item2} className="right__analytics">
