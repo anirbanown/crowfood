@@ -21,6 +21,10 @@ export const routes = [
     name: "Judiciary",
     path: "/judiciary",
   },
+  {
+    name: "Feedback",
+    path: "/feedback",
+  },
 ];
 
 export const analytics = [

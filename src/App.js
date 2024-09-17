@@ -12,7 +12,7 @@ import {
 } from "./Components";
 import Chat from "./Components/Chat.jsx"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import {Homepage,Executive,Legislative,Judiciary} from "./pages";
+import {Homepage,Executive,Legislative,Judiciary,FeedbackForm} from "./pages";
 
 const App = () => {
   return (
@@ -26,6 +26,7 @@ const App = () => {
           <Route path="executive" element={<Executive/>} />
           <Route path="legislative" element={<Legislative/>} />
           <Route path="judiciary" element={<Judiciary/>} />
+          <Route path="feedback" element={<FeedbackForm/>} />
       </Routes>
       </BrowserRouter>
         <Footer />

@@ -1,0 +1,11 @@
+@import "./constant";
+@import "./variables";
+
+.heading-bg-section{
+    background: $primary-color;
+    font-size: 64px;
+    height: max-content;
+    padding: 10rem 0;
+    text-align: center;
+    h1{@include textGradient;}
+}
