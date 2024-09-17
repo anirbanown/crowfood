@@ -44,13 +44,13 @@ const Footer = () => {
           </div>
           <div className="right__bottom">
             <ul>
-              <li>
+              <li className="transition-all" >
                 <FaFacebookF />
               </li>
-              <li>
+              <li className="transition-all">
                 <BsTwitter />
               </li>
-              <li>
+              <li className="transition-all">
                 <BsInstagram />
               </li>
             </ul>
