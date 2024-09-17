@@ -86,7 +86,9 @@ const Distribution = () => {
     <div className="app__distribution">
       <div className="btns">
         <button class="btn-donate" data-aos="fade-right">Quiz Time !</button>
+        <a href="https://sansthaein-aur-samvidhan-analytics.vercel.app/">
         <button class="btn-donate" data-aos="fade-left">Progress Analytics</button>
+        </a>
       </div>
       <div className="txt">
         <h1>Achieve Milestones and Get Certified</h1></div>

@@ -55,7 +55,7 @@ const Judiciary=()=> {
             <motion.h1 variants={item} className="">
               Judiciary
             </motion.h1>
-            <h3>
+            <h3 className="text-white font-semibold text-4xl">
               Your gateway to understanding and engaging with the Constitution
               of India in an interactive and enjoyable way
             </h3>

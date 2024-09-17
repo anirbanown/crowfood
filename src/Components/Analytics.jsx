@@ -86,9 +86,9 @@ const Analytics = () => {
             <p>
             The Constitution of India is the supreme law of our country, establishing the framework for governance and the fundamental rights and duties of its citizens. It lays down the structure and powers of the three main organs of government: the Legislature, the Executive, and the Judiciary.
             </p>
-            <p>
+            <div className="para text-3xl font-bold text-black mt-8">
               Click Below To Start Exploring :
-            </p>
+            </div>
           </div>
           <div className="left__analytics__container flex my-5">
           <a href="/executive" className="w-max h-max"><div className="analytic__container" key='0'>

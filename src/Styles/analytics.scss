@@ -25,10 +25,11 @@
 
         p {
           color: $neutral-color;
-          font-size: 1.3rem;
         }
       }
-
+      .para{
+        color: black;
+      }
       .left__analytics__container {
         gap: $lg-gap;
 
