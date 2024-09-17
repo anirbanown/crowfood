@@ -38,7 +38,6 @@
 
     button {
       @include button;
-      transition: all 5s ease-in ;
     }
     .twobtn{
       background: white;
@@ -47,7 +46,6 @@
 
     .onebtn {
       background: transparent;
-      color: white;
     }
 
     .onebtn:hover{

@@ -40,7 +40,7 @@ const Navbar = () => {
           style={{
             color: bgColor ? "#0c1727" : "white",
           }}
-          // className="onebtn"
+          className="onebtn"
           onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
                 >
           Logout
@@ -49,14 +49,18 @@ const Navbar = () => {
         :
         <div>
           <button
-            
+            style={{
+              color: bgColor ? "#0c1727" : "white",
+            }}
             className="onebtn"
             onClick={() => loginWithRedirect()}
           >
             Login
           </button>
           <button
-            
+            style={{
+              background: bgColor ? "transparent" : "white",
+            }}
             className="twobtn"
             onClick={() => loginWithRedirect({authorizationParams: { screen_hint: "signup" }})}
           >
