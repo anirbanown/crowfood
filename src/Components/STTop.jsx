@@ -17,12 +17,12 @@ const STTop = () => {
 
   return (
     <div className={isActive ? "app__sttop active" : "app__sttop"}>
-      <a href="#home">
+      <a href="#app">
         <BsArrowUp />
       </a>
     </div>
   );
-  
+
 };
 
 export default STTop;

@@ -23,7 +23,7 @@ const Navbar = () => {
   window.addEventListener("scroll", changeNavbarBackgroundColor);
 
   return (
-    <div className={bgColor ? "app__navbar active" : "app__navbar"}>
+    <div id="topnav" className={bgColor ? "app__navbar active" : "app__navbar"}>
       <div className="navbar__logo flex flex-row items-center">
         <img src={logo_lotus} className="h-20 aspect-ratio-1 object-cover mr-3" alt="" />
         <p>Sansthaein Aur Samvidhan</p>

@@ -61,6 +61,9 @@ html {
     @include flexCenter;
   }
 }
+.app__sttop:hover{
+  bottom: 32px;
+}
 
 // Media Queries for Responsiveness
 @media (max-width: 480px) {
