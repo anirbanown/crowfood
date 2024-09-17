@@ -3,7 +3,12 @@ import { useState } from "react";
 import { routes } from "../Data/dummy";
 import "../Styles/navbar.scss";
 
+import { useAuth0 } from "@auth0/auth0-react";
+
 const Navbar = () => {
+
+  const { loginWithRedirect,logout, user, isAuthenticated, isLoading } = useAuth0();
+
   const [bgColor, setBgColor] = useState(false);
 
   function changeNavbarBackgroundColor() {
@@ -29,22 +34,35 @@ const Navbar = () => {
         ))}
       </ul>
       <div className="navbar__buttons">
-        <button
+        {isAuthenticated?
+        <div>
+          <button
           style={{
             color: bgColor ? "#0c1727" : "white",
           }}
-          className="onebtn"
-        >
-          Login
-        </button>
-        <button
-          style={{
-            color: bgColor ? "white" : "#0c1727",
-            background: bgColor ? "#0c1727" : "white",
-          }}
-        >
-          Register
-        </button>
+          // className="onebtn"
+          onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+                >
+          Logout
+                </button>
+        </div>
+        :
+        <div>
+          <button
+            
+            className="onebtn"
+            onClick={() => loginWithRedirect()}
+          >
+            Login
+          </button>
+          <button
+            
+            className="twobtn"
+            onClick={() => loginWithRedirect({authorizationParams: { screen_hint: "signup" }})}
+          >
+            Register
+          </button>
+        </div>}
       </div>
     </div>
   );

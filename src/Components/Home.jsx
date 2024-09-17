@@ -35,7 +35,11 @@ const Home = () => {
   }, [control, inView]);
 
   return (
-    <div className="app__home" id="home">
+    <>
+    <div className="primary-bg-section"></div>
+    
+    <div className="app__home justify-center" id="home">
+      
       <div className="top-container">
         <div className="Left container">
           <motion.div
@@ -43,8 +47,7 @@ const Home = () => {
             animate={control}
             variants={list}
             ref={ref}
-            className="home__text"
-          >
+            className="home__text" >
             <motion.h1 variants={item} className="">Sansthaein Aur Samvidhan</motion.h1>
             <h3>Your gateway to understanding and engaging with the Constitution of India in an interactive and enjoyable way</h3>
           </motion.div>
@@ -67,6 +70,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

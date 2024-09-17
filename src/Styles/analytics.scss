@@ -10,7 +10,7 @@
     @include flexAlign;
 
     .left__analytics {
-      @include flexDirection;
+      flex-direction: row;
       gap: $lg-gap;
       flex: 1;
 
@@ -79,6 +79,7 @@
   .app__analytics {
     padding: 250% $sm-gap 5% $sm-gap;
   }
+  
 
   .analytics__container {
     @include flexDirection;
@@ -208,15 +209,19 @@
 @media (min-width: 1025px) and (max-width: 1440px) {
   // Small Desktops
   .app__analytics {
-    padding: 35% $md-gap 10% $md-gap;
+    padding: 10% $md-gap 10% $md-gap;
+  }
+  .left__analytics__container{
+    flex-direction: row;
   }
 
   .analytics__container {
     @include flexAlign;
-    gap: $lg-gap;
+    // gap: $lg-gap;
+    // flex-wrap: wrap;
 
     .left__analytics {
-      flex: 1;
+      // flex: 1;
       gap: $lg-gap;
 
       .left__text {
@@ -251,7 +256,7 @@
 @media (min-width: 1441px) {
   // Large Desktops
   .app__analytics {
-    padding: 35% $md-gap 10% $md-gap;
+    padding: 10% $md-gap 10% $md-gap;
   }
 
   .analytics__container {

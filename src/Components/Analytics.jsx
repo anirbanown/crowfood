@@ -90,7 +90,7 @@ const Analytics = () => {
               Click Below To Start Exploring :
             </p>
           </div>
-          <div className="left__analytics__container">
+          <div className="left__analytics__container flex my-5">
           <div className="analytic__container" key='0'>
                 <div className="analytics__icon"> <FaUserTie fontSize='1.4em'/></div>
                 <p>Executive</p>

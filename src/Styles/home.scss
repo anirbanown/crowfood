@@ -1,9 +1,18 @@
 @import "./constant";
 @import "./variables";
 
-.app__home {
-  height: 130vh;
+.primary-bg-section{
+  position: absolute;
+  top: 0;
   background: $primary-color;
+  z-index: -9999;
+  height: 130vh;
+  width: 100vw;
+}
+
+.app__home {
+  height: 80vh;
+  
   padding: $ex-gap $md-gap;
   @include flexDirection;
   gap: 3rem;
@@ -185,7 +194,7 @@
 @media (min-width: 1025px) and (max-width: 1440px) {
   // Small Desktops
   .app__home {
-    height: 130vh;
+    height: 95vh;
     padding: $md-gap $lg-gap;
     gap: 2.5rem;
 
@@ -220,7 +229,7 @@
 @media (min-width: 1441px) {
   // Large Desktops
   .app__home {
-    height: 130vh;
+    height: 95vh;
     padding: $ex-gap $md-gap;
     gap: 3rem;
 

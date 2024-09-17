@@ -103,7 +103,7 @@ const Distribution = () => {
         ref={ref}
         animate={control}
         variants={list}
-        className="distribution__container"
+        className="distribution__container mt-32"
       >
         <motion.div variants={item1} className="left__distribution">
 
@@ -112,7 +112,7 @@ const Distribution = () => {
             <p>
               Get Exclusive AR / VR experience on Our Android Application to Understand Constitution in a better way with Flow Charts, Animations and Lot More of a Gamified Experience            </p>
           </div>
-          <div className="distribution__buttons">
+          {/* <div className="distribution__buttons text-black">
             <button>
               <BsApple />
               Download App
@@ -121,7 +121,7 @@ const Distribution = () => {
               <IoLogoGooglePlaystore />
               Download App
             </button>
-          </div>
+          </div> */}
         </motion.div>
         <motion.div variants={item2} className="right__distribution">
           <img src={twophones} alt="" draggable={false} />

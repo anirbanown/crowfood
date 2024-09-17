@@ -11,20 +11,26 @@ import {
   STTop,
 } from "./Components";
 import Chat from "./Components/Chat.jsx"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Homepage,Executive,Legislative,Judiciary} from "./pages";
 
 const App = () => {
   return (
-    <div className="app">
+    <div>
       <Navbar />
-      <Home />
-      <DashboardPreview />
-      <Analytics />
-      <Feature />
-      <Distribution />
-      <Footer />
-      <STTop />
-      <Chat/>
+      
+      <BrowserRouter>
+      <Routes>
+        <Route index element={<Homepage />} />
+        <Route path="/e" element={<Homepage />} />
+          <Route path="executive" element={<Executive/>} />
+          <Route path="legislative" element={<Legislative/>} />
+          <Route path="judiciary" element={<Judiciary/>} />
+      </Routes>
+      </BrowserRouter>
+        <Footer />
+        <STTop />
+        <Chat/>
     </div>
   );
 };

@@ -62,9 +62,8 @@ function Chat() {
   return (
     <div className=''>
       {/* Floating Button with Icons */}
-      <div className={`${isHover?'bg-bharatiai-hover':''} fixed z-9999 bottom-8 right-8 h-max w-max border-2 text-[#fab466] flex flex-row rounded-5xl justify-end items-center shadow-lg bg-bharatiai  transition-all  duration-350`}>
-        <div className={`text-2xl text-violet-600 flex justify-center items-center w-control h-control  transition-all delay-150 duration-350 overflow-x-hidden`}>Vidhi<span className="text-[#fab466]">.AI</span></div>
-        <div
+      <div className={`${isHover?'bg-bharatiai-hover':''} fixed z-9999 bottom-8 left-8 h-max w-max border-2 text-[#fab466] flex flex-row rounded-5xl justify-end items-center shadow-lg bg-bharatiai  transition-all  duration-350`}>
+      <div
           className="w-max p-4 text-white transition-all duration-300 transform bg-violet-600 rounded-full cursor-pointer z-9999 scale-110 hover:bg-violet-600 hover:scale-125"
           onClick={() => setIsOpen(!isOpen)}
           onMouseEnter={()=>setIsHover(true)}
@@ -78,14 +77,16 @@ function Chat() {
             <FaRocketchat className='text-2xl'/>
           )}
         </div>
+        <div className={`text-2xl text-violet-600 flex justify-center items-center w-control h-control  transition-all delay-150 duration-350 overflow-x-hidden`}>Vidhi<span className="text-[#fab466]">.AI</span></div>
+        
       </div>
 
       {/* Larger Animated Chatbox */}
       <div
-        className={`fixed z-9999 bottom-28 right-6 shadow-5xl w-96 h-[30rem] rounded-lg shadow-lg p-6 flex flex-col transition-all duration-500 ease-in-out transform ${
+        className={`fixed z-9999 bottom-28 left-6 shadow-5xl w-96 h-[30rem] rounded-lg shadow-lg p-6 flex flex-col transition-all duration-500 ease-in-out transform ${
           isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0 "
         } bg-chatbot chatbox-responsive`}
-        style={{ transformOrigin: "bottom right" }} // Animation origin for smooth open/close
+        style={{ transformOrigin: "bottom left" }} // Animation origin for smooth open/close
       >
         {/* Heading with Animation */}
         <h2 className="mb-4 text-2xl font-bold text-violet-600">

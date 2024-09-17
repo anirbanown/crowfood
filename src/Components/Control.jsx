@@ -75,7 +75,7 @@ const Control = () => {
         <div className="control__text">
           <h1>Bored ? Lets Play Some Games</h1>
           <p>
-            MEMORY CARD GAME or SPINNING WHEEL GAME or PLAY TO EARN WEB 3 GAME ? What Do You Wanna Play Today ! Using augmented reality, gamified learning, AI-driven personalized paths, and blockchain for credentials, we transform traditional constitutional education into a dynamic and interactive experience.
+            MEMORY CARD GAME or SPINNING WHEEL GAME or PLAY TO EARN WEB 3 GAME ? <br/>What Do You Wanna Play Today ! <br/>Using augmented reality, gamified learning, AI-driven personalized paths, and blockchain for credentials, we transform traditional constitutional education into a dynamic and interactive experience.
           </p>
           {/* <button>Start 14 days trial</button> */}
         </div>
@@ -83,8 +83,8 @@ const Control = () => {
           {controls.map((control, index) => (
 
             <a href={control.link}>
-              <div className="control" key={index}>
-                <div className="control__icon">
+              <div className="control transition-all cursor-pointer hover:scale-105 shadow-xl" key={index}>
+                <div className="control__icon text-2xl">
                   <control.icon />
                 </div>
 

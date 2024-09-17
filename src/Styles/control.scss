@@ -71,13 +71,14 @@
         }
 
         .control__icon {
-          width: 30px;
-          height: 30px;
+          width: max-content;
+          aspect-ratio: 1;
           background: $elementary-color;
           box-shadow: $elementary-shadow;
           @include flexCenter;
           border-radius: 50%;
           transition: color 0.3s ease;
+          padding: 1rem
         }
 
         .control__text__content {
@@ -144,10 +145,6 @@
         .control {
           padding: $sm-gap;
 
-          .control__icon {
-            width: 25px;
-            height: 25px;
-          }
         }
       }
     }
@@ -190,11 +187,10 @@
 
         .control {
           padding: $md-gap;
-
-          .control__icon {
-            width: 28px;
-            height: 28px;
-          }
+          // .control__icon {
+          //   width: 28px;
+          //   height: 28px;
+          // }
         }
       }
     }
@@ -237,11 +233,10 @@
 
         .control {
           padding: $lg-gap;
-
-          .control__icon {
-            width: 30px;
-            height: 30px;
-          }
+          // .control__icon {
+          //   width: 30px;
+          //   height: 30px;
+          // }
         }
       }
     }
@@ -283,11 +278,10 @@
 
         .control {
           padding: $lg-gap;
-
-          .control__icon {
-            width: 30px;
-            height: 30px;
-          }
+          // .control__icon {
+          //   width: 30px;
+          //   height: 30px;
+          // }
         }
       }
     }
@@ -329,11 +323,10 @@
 
         .control {
           padding: $lg-gap;
-
-          .control__icon {
-            width: 30px;
-            height: 30px;
-          }
+          // .control__icon {
+          //   width: 30px;
+          //   height: 30px;
+          // }
         }
       }
     }

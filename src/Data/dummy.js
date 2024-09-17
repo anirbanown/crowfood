@@ -1,23 +1,25 @@
 import { AiOutlineClockCircle, AiFillCloud } from "react-icons/ai";
 import { SiGooglepodcasts } from "react-icons/si";
-
+import { FaHeadSideVirus } from "react-icons/fa";
+import { MdOutlineCasino } from "react-icons/md";
+import { SiTether } from "react-icons/si";
 
 export const routes = [
   {
     name: "Home",
-    path: "#",
+    path: "/",
   },
   {
-    name: "How it works",
-    path: "#how",
+    name: "Executive",
+    path: "/executive",
   },
   {
-    name: "About Us",
-    path: "#about",
+    name: "Legislative",
+    path: "/legislative",
   },
   {
-    name: "Contact Us",
-    path: "#contact",
+    name: "Judiciary",
+    path: "/judiciary",
   },
 ];
 
@@ -46,17 +48,17 @@ export const features = [
 export const controls = [
   {
     name: "Memory Cards",
-    icon: SiGooglepodcasts,
+    icon: FaHeadSideVirus,
     link: 'https://sansthaein-aur-samvidhan-memory-card.vercel.app/',
   },
   {
     name: "Spinning Wheel",
-    icon: AiFillCloud,
+    icon: MdOutlineCasino,
     link: 'https://sansthaein-aur-samvidhan-spin-wheel.vercel.app/',
   },
   {
     name: "Play to earn on Web 3",
-    icon: AiOutlineClockCircle,
+    icon: SiTether,
     link: '',
   },
 ];
